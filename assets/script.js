@@ -13,18 +13,7 @@ var currentDayEl = $('#currentDay');
 var containerEl = $('.container');
 //get current time in hA format
 var currentHour = dayjs().hour();
-var workDayHours = [
-  dayjs().hour(8).format('hA'),
-  dayjs().hour(9).format('hA'),
-  dayjs().hour(10).format('hA'),
-  dayjs().hour(11).format('hA'),
-  dayjs().hour(12).format('hA'),
-  dayjs().hour(13).format('hA'),
-  dayjs().hour(14).format('hA'),
-  dayjs().hour(15).format('hA'),
-  dayjs().hour(16).format('hA'),
-  dayjs().hour(17).format('hA')
-];
+
 // Display today's day and date TODO: Update so it continuously updates the page??
 $(function () {
 
