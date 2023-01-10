@@ -72,14 +72,15 @@ document.getElementById("saveBtn");
         hour.classList.add('present');
       }
     
+
+  
     //   event.value = localStorage.getItem(hour.id) || '';
     //   time.innerHTML = `${i}:00`;
 
 
   
     // // Calling the hourUpdater function upon document's initial "ready"
-    // hourUpdater();
-    // })
+
     
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
@@ -96,52 +97,58 @@ document.getElementById("saveBtn");
       $("#hour-16"),
       $("#hour-17"),
     ]
+//Storing information from a click of a button 
+$("button").click(function () {
+    function storeValue(row, key) {
+        let userInput = $(row).val(); 
+        localStorage.setItem(key, userInput);
+    }
+    storeValue(".textarea.row.8", "key8")
+    storeValue(".textarea.row.9", "key9");
+    storeValue(".textarea.row.10", "key10");
+    storeValue(".textarea.row.11", "key11");
+    storeValue(".textarea.row.12", "key12");
+    storeValue(".textarea.row.13", "key13");
+    storeValue(".textarea.row.14", "key14");
+    storeValue(".textarea.row.15", "key15");
+    storeValue(".textarea.row.16", "key16");
+    storeValue(".textarea.row.17", "key17");
 
 
-    localStorage.setItem("#hour-8",JSON.stringify(textRows));
-    localStorage.setItem("#hour-9",JSON.stringify(textRows));
-    localStorage.setItem("#hour-10",JSON.stringify(textRows));
-    localStorage.setItem("#hour-11",JSON.stringify(textRows));
-    localStorage.setItem("#hour-12",JSON.stringify(textRows));
-    localStorage.setItem("#hour-13",JSON.stringify(textRows));
-    localStorage.setItem("#hour-14",JSON.stringify(textRows));
-    localStorage.setItem("#hour-15",JSON.stringify(textRows));
-    localStorage.setItem("#hour-16",JSON.stringify(textRows));
-    localStorage.setItem("#hour-17",JSON.stringify(textRows));
     //      // Retrieve any stored data from localStorage and place it into the correct hour-row
     var hour8 = localStorage.getItem("hour-8");
-    $("#hour-8 .description").val(hour8);
+    $(".textarea.row.8").val(hour8);
     
     var hour9 = localStorage.getItem("hour-9");
-    $("#hour-9 .description").val(hour9);
+    $(".textarea.row.9").val(hour9);
   
     var hour10 = localStorage.getItem("hour-10");
-    $("#hour-10 .description").val(hour10);
+    $(".textarea.row.10").val(hour10);
   
     var hour11 = localStorage.getItem("hour-11");
-    $("#hour-11 .description").val(hour11);
+    $(".textarea.row.11").val(hour11);
     
     var hour12 = localStorage.getItem("hour-12");
-    $("#hour-12 .description").val(hour12);
+    $(".textarea.row.12").val(hour12);
     
     var hour13 = localStorage.getItem("hour-13");
-    $("#hour-13 .description").val(hour13);
+    $(".textarea.row.13").val(hour13);
     
     var hour14 = localStorage.getItem("hour-14");
-    $("#hour-14 .description").val(hour14);
+    $(".textarea.row.14").val(hour14);
     
     var hour15 = localStorage.getItem("hour-15");
-    $("#hour-15 .description").val(hour15);
+    $(".textarea.row.15").val(hour15);
     
     var hour16 = localStorage.getItem("hour-16");
-    $("#hour-16 .description").val(hour16);
+    $(".textarea.row.16").val(hour16);
     
     var hour17 = localStorage.getItem("hour-17");
-    $("#hour-17 .description").val(hour17);
+    $(".textarea.row.17").val(hour17);
     // TODO: Add code to display the current date in the header of the page.
 
     var now = dayjs().format("dddd, MMMM D, YYYY [at], HH:mm");
     timeDisplayEl.text(now);
   
   
-}})
+})}})
